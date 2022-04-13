@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include "stdlib.h"
+int main()
+{
+	int *nums;
+	int numSize = 5, val = 2;
+	int left = 0, right;
+	for(right = 0; right<numSize; right++)
+	{
+		if(nums[right] != val)
+		{
+			nums[left] = nums[right];
+			left++;
+		}
+	}
+	for(right = 0; right<numSize; right++)
+		printf("%d", nums[right]);
+	return 0;
+ } 
